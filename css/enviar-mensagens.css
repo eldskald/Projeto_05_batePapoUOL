@@ -12,30 +12,44 @@
     justify-content: space-between;
     align-items: center;
 
-    border-top: 4px solid #ffffff;
+    border-top: 3px solid white;
     background-color: #182730;
-    /* background-color: #ff4b94; */
     box-shadow: 0px 0px 12px 12px #182730;
 }
 
-.enviar-mensagens > textarea {
+.enviar-mensagens > div {
+    max-width: 90%;
+}
+
+.enviar-mensagens > div > textarea {
+    max-width: 100%;
+    
     border-style: none;
     background-color: rgba(0, 0, 0, 0);
     outline: none;
     resize: none;
 
-    color: #ffffff;
+    color: white;
     font-family: "Roboto";
     font-size: 16px;
     font-weight: 400;
 }
 
 ::placeholder {
-    color: #ffffff;
-    opacity: .5;
+    color: white;
+    opacity: .75;
+}
+
+.enviar-mensagens > div > p {
+    margin: 4px 0px 0px 16px;
+    color: gray;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .enviar-mensagens > ion-icon {
-    color: #ffffff;
-    font-size: 36px;
+    margin-left: 4px;
+    color: white;
+    font-size: 32px;
 }
