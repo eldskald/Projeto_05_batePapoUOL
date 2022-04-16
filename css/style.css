@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+/** Barra do topo ************************************************************/
+.barra-topo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ff4b94;
+    box-shadow: 0px 6px 6px #000000;
+}
+
+.barra-topo > img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.barra-topo > ion-icon {
+    color: #ffffff;
+    font-size: 64px;
+}
+/** Barra do topo ************************************************************/
+
+
+
+/** Barra de escrever e enviar mensagens *************************************/
+.enviar-mensagens {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ff4b94;
+    box-shadow: 0px -6px 6px #000000;
+}
+
+.enviar-mensagens > textarea {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 400;
+    outline: none;
+    resize: none;
+}
+
+::placeholder {
+    color: #ffffff;
+    opacity: .5;
+}
+
+.enviar-mensagens > ion-icon {
+    color: #ffffff;
+    font-size: 48px;
+}
+/** Barra de escrever e enviar mensagens *************************************/
