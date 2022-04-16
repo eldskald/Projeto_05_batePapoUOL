@@ -1,6 +1,17 @@
+
 * {
     box-sizing: border-box;
 }
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    color: #888888;
+}
+
+
 
 /** Barra do topo ************************************************************/
 .barra-topo {
@@ -9,6 +20,7 @@
     left: 0px;
     right: 0px;
     height: 100px;
+    z-index: 1;
 
     padding: 12px;
     display: flex;
@@ -39,8 +51,9 @@
     left: 0px;
     right: 0px;
     height: 100px;
+    z-index: 1;
 
-    padding: 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,12 +65,13 @@
 .enviar-mensagens > textarea {
     border-style: none;
     background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    font-family: "Roboto";
-    font-size: 20px;
-    font-weight: 400;
     outline: none;
     resize: none;
+
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
 }
 
 ::placeholder {
@@ -67,6 +81,44 @@
 
 .enviar-mensagens > ion-icon {
     color: #ffffff;
-    font-size: 48px;
+    font-size: 36px;
 }
 /** Barra de escrever e enviar mensagens *************************************/
+
+
+
+/** Container do chat ********************************************************/
+.chat {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 0px;
+    right: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    overflow: scroll;
+
+    background-color: #182730;
+}
+
+.mensagem {
+    margin: 4px 0px;
+    padding: 8px 12px;
+
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.mensagem.status {
+    background-color:rgba(150, 150, 150, 0.5);
+}
+
+.mensagem.privada {
+    background-color:rgba(207, 70, 134, 0.5);
+}
+/** Container do chat ********************************************************/
