@@ -17,6 +17,7 @@
 }
 
 .espacador {
+    min-height: 20px;
     flex-grow: 1;
 }
 
@@ -31,15 +32,15 @@
 }
 
 .mensagem.status {
-    background-color:rgba(150, 150, 150, 0.5);
+    color: aquamarine;
 }
 
 .mensagem.privada {
-    background-color:rgba(207, 70, 134, 0.5);
+    color: violet;
 }
 
 .mensagem > span.tempo {
     margin-right: 8px;
-    color: #a0a0a0;
+    opacity: 0.5;
     font-weight: 400;
 }
