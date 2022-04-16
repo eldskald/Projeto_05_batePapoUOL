@@ -1,0 +1,39 @@
+
+.enviar-mensagens {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    z-index: 1;
+
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ff4b94;
+    box-shadow: 0px 0px 12px 12px #182730;
+}
+
+.enviar-mensagens > textarea {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    resize: none;
+
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+::placeholder {
+    color: #ffffff;
+    opacity: .5;
+}
+
+.enviar-mensagens > ion-icon {
+    color: #ffffff;
+    font-size: 36px;
+}

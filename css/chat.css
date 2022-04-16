@@ -1,0 +1,45 @@
+
+.chat {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 0px;
+    right: 0px;
+
+    padding: 0px 0px 18px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: scroll;
+
+    background-color: #182730;
+}
+
+.espacador {
+    flex-grow: 1;
+}
+
+.mensagem {
+    margin: 4px 0px;
+    padding: 8px 12px;
+
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.mensagem.status {
+    background-color:rgba(150, 150, 150, 0.5);
+}
+
+.mensagem.privada {
+    background-color:rgba(207, 70, 134, 0.5);
+}
+
+.mensagem > span.tempo {
+    margin-right: 8px;
+    color: #a0a0a0;
+    font-weight: 400;
+}
