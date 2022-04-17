@@ -8,6 +8,10 @@
     --msg3color: violet;
 }
 
+body {
+    background-color: var(--bgcolor);
+}
+
 * {
     box-sizing: border-box;
 }

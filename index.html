@@ -11,12 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/entrada.css">
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" href="css/barra-topo.css">
     <link rel="stylesheet" href="css/enviar-mensagens.css">
     <link rel="stylesheet" href="css/chat.css">
 </head>
+
 <body>
+    <div class="entrada">
+        <img class="logo" src="img/driven-logo.png" />
+        <p>&lt;driven chat&gt;</p>
+
+        <div>
+            <input class="input-nome" type="text" placeholder="Digite seu nome" />
+            <div class="botao-entrar">Entrar</div>
+            <div class="mensagem-de-erro">teste aaaaaaa</div>
+        </div>
+    </div>
+
     <div class="barra-topo">
         <img src="img/driven-logo.png" />
         <ion-icon name="people-outline"></ion-icon>
@@ -51,6 +64,7 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
