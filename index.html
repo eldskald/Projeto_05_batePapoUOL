@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/barra-topo.css">
     <link rel="stylesheet" href="css/enviar-mensagens.css">
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/script.css">
 </head>
 
 <body>
@@ -25,8 +26,8 @@
 
         <div>
             <input class="input-nome" type="text" placeholder="Digite seu nome" />
-            <div class="botao-entrar">Entrar</div>
-            <div class="mensagem-de-erro">teste aaaaaaa</div>
+            <div class="botao-entrar" onclick="pegarNome()">Entrar</div>
+            <div class="mensagem-de-erro"></div>
         </div>
     </div>
 
@@ -67,5 +68,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/conexao.js"></script>
 </body>
 </html>
