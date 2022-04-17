@@ -1,4 +1,13 @@
 
+:root {
+    --bgcolor: #182730;
+    --maincolor: white;
+    --seccolor: gray;
+    --msg1color: lightgray;
+    --msg2color: aquamarine;
+    --msg3color: violet;
+}
+
 * {
     box-sizing: border-box;
 }

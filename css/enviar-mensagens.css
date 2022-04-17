@@ -12,9 +12,9 @@
     justify-content: space-between;
     align-items: center;
 
-    border-top: 3px solid white;
-    background-color: #182730;
-    box-shadow: 0px 0px 12px 12px #182730;
+    border-top: 3px solid var(--maincolor);
+    background-color: var(--bgcolor);
+    box-shadow: 0px 0px 12px 12px var(--bgcolor);
 }
 
 .enviar-mensagens > div {
@@ -29,20 +29,20 @@
     outline: none;
     resize: none;
 
-    color: white;
+    color: var(--maincolor);
     font-family: "Roboto";
     font-size: 16px;
     font-weight: 400;
 }
 
 ::placeholder {
-    color: white;
+    color: var(--maincolor);
     opacity: .75;
 }
 
 .enviar-mensagens > div > p {
     margin: 4px 0px 0px 16px;
-    color: gray;
+    color: var(--seccolor);
     font-family: "Roboto";
     font-size: 14px;
     font-weight: 400;
@@ -50,6 +50,6 @@
 
 .enviar-mensagens > ion-icon {
     margin-left: 4px;
-    color: white;
+    color: var(--maincolor);
     font-size: 32px;
 }

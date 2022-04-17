@@ -12,9 +12,9 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: #182730;
-    border-bottom: 3px solid white;
-    box-shadow: 0px 0px 12px 12px #182730;
+    background-color: var(--bgcolor);
+    border-bottom: 3px solid var(--maincolor);
+    box-shadow: 0px 0px 12px 12px var(--bgcolor);
 }
 
 .barra-topo > img {
@@ -22,7 +22,7 @@
 }
 
 .barra-topo > ion-icon {
-    color: white;
+    color: var(--maincolor);
     font-size: 64px;
     --ionicon-stroke-width: 24px;
 }
