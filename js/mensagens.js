@@ -40,12 +40,14 @@ function sucessoCarregar (resposta) {
                 `;
                 break;
             case "private-message":
-                chat.innerHTML += `
-                    <div class="mensagem privada">
-                        <span class="tempo">(${mensagem.time})</span>
-                        <em>${mensagem.from}</em> reservadamente para <em>${mensagem.to}</em>: ${mensagem.text}
-                    </div>
-                `;
+                if (mensagem.to === usuarioNome) {
+                    chat.innerHTML += `
+                        <div class="mensagem privada">
+                            <span class="tempo">(${mensagem.time})</span>
+                            <em>${mensagem.from}</em> reservadamente para <em>${mensagem.to}</em>: ${mensagem.text}
+                        </div>
+                    `;
+                }
                 break;
         }
     });
