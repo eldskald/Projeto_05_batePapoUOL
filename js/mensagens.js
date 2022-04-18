@@ -40,8 +40,8 @@ function sucessoCarregar (resposta) {
                     </div>
                 `;
                 break;
-            case "private-message":
-                if (mensagem.to === usuarioNome) {
+            case "private_message":
+                if (mensagem.to === usuarioNome || mensagem.from === usuarioNome) {
                     chat.innerHTML += `
                         <div class="mensagem privada">
                             <span class="tempo">(${mensagem.time})</span>
@@ -73,7 +73,7 @@ function enviarMensagem () {
         from: usuarioNome,
         to: mandandoPara,
         text: inputMensagem.value,
-        type: "message"
+        type: visibilidade
     };
     const promessa = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", envio);
     promessa.then(sucessoEnviar);

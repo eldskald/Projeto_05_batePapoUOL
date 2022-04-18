@@ -45,7 +45,7 @@
     <div class="enviar-mensagens">
         <div>
             <input class="input-mensagem" type="text" placeholder="Escreva aqui..." />
-            <p>Enviando para <em>todos</em></p>
+            <p class="indicador-visibilidade">Enviando para <em>todos</em></p>
         </div>
         
         <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
@@ -61,16 +61,16 @@
         <div class="participantes-lista">
         </div>
 
-        <p>Escolha a visibilidade</p>
+        <p class="visibilidade-titulo">Escolha a visibilidade</p>
         <div class="visibilidade-lista">
-            <div class="visibilidade-opcao">
+            <div class="visibilidade-opcao publica">
                 <ion-icon name="lock-open-outline"></ion-icon>
-                <p>Público</p>
+                <p onclick="mudarVisibilidade('message')">Pública</p>
                 <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
             </div>
-            <div class="visibilidade-opcao">
+            <div class="visibilidade-opcao reservada">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <p>Reservado</p>
+                <p onclick="mudarVisibilidade('private_message')">Reservada</p>
                 <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
             </div>
         </div>

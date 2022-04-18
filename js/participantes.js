@@ -1,10 +1,12 @@
 
 let mandandoPara = "Todos";
-let visibilidade = "Pública";
+let visibilidade = "message";
 
 const menuFundo = document.querySelector(".participantes");
 const menuLayout = document.querySelector(".participantes-menu");
 const menuLista = document.querySelector(".participantes-lista");
+const menuVisibilidade = document.querySelector(".visibilidade-lista");
+const menuVisibilidadeTitulo = document.querySelector(".visibilidade-titulo");
 
 
 
@@ -19,6 +21,7 @@ function animarAbertura () {
     menuFundo.classList.remove("desativando");
     menuLayout.classList.remove("desativando");
     renderizarLista();
+    renderizarVisibilidade();
 }
 
 function fecharMenu () {
@@ -45,7 +48,7 @@ function sucessoRenderizar (resposta) {
     menuLista.innerHTML = `
         <div class="participante">
             <ion-icon name="people-outline"></ion-icon>
-            <p onclick="escolherParticipante(this)">Todos</p>
+            <p onclick="escolherTodos()">Todos</p>
             <ion-icon name="checkmark-outline" class="checkmark desativado"></ion-icon>
         </div>
     `;
@@ -63,7 +66,6 @@ function sucessoRenderizar (resposta) {
     const nodos = menuLista.querySelectorAll(".participante");
     for (let i = 0; i < nodos.length; i++) {
         let nome = nodos[i].querySelector("p").innerHTML;
-        console.log(nome);
         if (nome === mandandoPara) {
             let check = nodos[i].querySelector(".checkmark");
             check.classList.remove("desativado");
@@ -71,9 +73,67 @@ function sucessoRenderizar (resposta) {
     }
 }
 
+function escolherTodos () {
+    mandandoPara = "Todos";
+    visibilidade = "Pública";
+    renderizarLista();
+    renderizarVisibilidade();
+    atualizarIndicador();
+}
+
 function escolherParticipante (nodo) {
     mandandoPara = nodo.innerHTML;
     renderizarLista();
+    renderizarVisibilidade();
+    atualizarIndicador();
 }
 // Funções de gerenciar a lista de participantes
 
+
+
+// Funções de escolher se a mensagem será pública ou privada
+function renderizarVisibilidade () {
+    if (mandandoPara !== "Todos") {
+        menuVisibilidade.classList.remove("desativado");
+        menuVisibilidadeTitulo.classList.remove("desativado");
+    }
+    else {
+        menuVisibilidade.classList.add("desativado");
+        menuVisibilidadeTitulo.classList.add("desativado");
+    }
+
+    const opcaoPublica = menuVisibilidade.querySelector(".publica");
+    const opcaoReservada = menuVisibilidade.querySelector(".reservada");
+    switch (visibilidade) {
+        case "message":
+            opcaoPublica.querySelector(".checkmark").classList.remove("desativado");
+            opcaoReservada.querySelector(".checkmark").classList.add("desativado");
+            break;
+        case "private_message":
+            opcaoPublica.querySelector(".checkmark").classList.add("desativado");
+            opcaoReservada.querySelector(".checkmark").classList.remove("desativado");
+            break;
+    }
+}
+
+function mudarVisibilidade (novoValor) {
+    visibilidade = novoValor;
+    renderizarVisibilidade();
+    atualizarIndicador();
+}
+
+function atualizarIndicador () {
+    const indicador = document.querySelector(".indicador-visibilidade");
+    switch (visibilidade) {
+        case "message":
+            indicador.innerHTML = `
+                Enviando para <em>${mandandoPara}</em>:
+            `;
+            break;
+        case "private_message":
+            indicador.innerHTML = `
+                Enviando reservadamente para <em>${mandandoPara}</em>:
+            `;
+    }
+}
+// Funções de escolher se a mensagem será pública ou privada

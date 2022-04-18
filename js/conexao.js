@@ -33,6 +33,8 @@ function sucessoEntrar () {
     mensagemDeErro.innerHTML = "";
     telaDeEntrada.classList.add("desativado");
     usuarioNome = inputNome.value;
+    mandandoPara = "Todos";      // Variável no participantes.js
+    visibilidade = "message";    // Variável no participantes.js
     intervaloManterConexao = setInterval(manterConexao, 5000);
     inicializarChat();
 }
