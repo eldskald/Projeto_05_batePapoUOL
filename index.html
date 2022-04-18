@@ -38,37 +38,22 @@
 
     <div class="enviar-mensagens">
         <div>
-            <textarea placeholder="Escreva aqui..." rows=2 cols=120 maxlength=200></textarea>
+            <textarea class="input-mensagem" placeholder="Escreva aqui..." rows=2 cols=120 maxlength=200></textarea>
             <p>Enviando para <em>todos</em></p>
         </div>
         
-        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
     </div>
 
     <div class="chat">
         <div class="espacador"></div>
-
-        <div class="mensagem status">
-            <span class="tempo">(66:66:66)</span> <em>Testador</em> para <em>todos</em>: oi, teste, som, oi, teste...
-        </div>
-
-        <div class="mensagem">
-            <span class="tempo">(66:66:66)</span> <em>Testador</em> para <em>todos</em>: oi, teste, som, oi, teste...
-        </div>
-
-        <div class="mensagem">
-            <span class="tempo">(66:66:66)</span> <em>Testador</em> para <em>todos</em>: oi, teste, som, oi, teste...
-        </div>
-
-        <div class="mensagem privada">
-            <span class="tempo">(66:66:66)</span> <em>Testador</em> para <em>todos</em>: oi, teste, som, oi, teste...
-        </div>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script src="js/mensagens.js"></script>
     <script src="js/conexao.js"></script>
 </body>
 </html>

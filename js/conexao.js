@@ -1,6 +1,6 @@
 
 let usuarioNome;
-let requisicaoChecagem;
+let intervaloManterConexao;
 
 const telaDeEntrada = document.querySelector(".entrada");
 const inputNome = document.querySelector(".input-nome");
@@ -20,7 +20,8 @@ function sucessoEntrar () {
     mensagemDeErro.innerHTML = "";
     telaDeEntrada.classList.add("desativado");
     usuarioNome = inputNome.value;
-    requisicaoChecagem = setInterval(manterConexao, 5000);
+    intervaloManterConexao = setInterval(manterConexao, 5000);
+    inicializarChat();
 }
 
 function falhaEntrar (erro) {
@@ -37,16 +38,12 @@ function falhaEntrar (erro) {
 function manterConexao () {
     const dados = {name: inputNome.value};
     const requisicao = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", dados);
-    requisicao.then(sucessoManter);
     requisicao.catch(falhaManter);
-}
-
-function sucessoManter () {
-    alert("brabo d+");
 }
 
 function falhaManter () {
     mensagemDeErro.innerHTML = "Conexão perdida!"
     telaDeEntrada.classList.remove("desativado");
+    clearInterval(intervaloManterConexao);
 }
 // Funções que lidam com a manutenção de conexão no chat
