@@ -9,7 +9,14 @@ const mensagemDeErro = document.querySelector(".mensagem-de-erro");
 
 
 // Funções que lidam com a entrada no chat
-function pegarNome () {
+inputNome.onkeypress = (event) => {
+    const tecla = event.keyCode;
+    if (tecla === 13) {
+        entrarNoChat();
+    }
+}
+
+function entrarNoChat () {
     const dados = {name: inputNome.value};
     const requisicao = axios.post("https://mock-api.driven.com.br/api/v6/uol/participants", dados);
     requisicao.then(sucessoEntrar);

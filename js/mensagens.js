@@ -60,6 +60,13 @@ function sucessoCarregar (resposta) {
 
 
 // Enviando mensagens
+inputMensagem.onkeypress = (event) => {
+    const tecla = event.keyCode;
+    if (tecla === 13) {
+        enviarMensagem();
+    }
+}
+
 function enviarMensagem () {
     const envio = {
         from: usuarioNome,
@@ -67,13 +74,13 @@ function enviarMensagem () {
         text: inputMensagem.value,
         type: "message"
     };
-    inputMensagem.value = "";
     const promessa = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", envio);
     promessa.then(sucessoEnviar);
     promessa.catch(falhaEnviar);
 }
 
 function sucessoEnviar () {
+    inputMensagem.value = "";
     carregarMensagens();
 }
 
