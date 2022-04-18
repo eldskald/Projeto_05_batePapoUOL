@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/barra-topo.css">
     <link rel="stylesheet" href="css/enviar-mensagens.css">
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/participantes.css">
     <link rel="stylesheet" href="css/script.css">
 </head>
 
@@ -25,7 +26,7 @@
         <p>&lt;driven chat&gt;</p>
 
         <div class="entrar">
-            <input class="input-nome" type="text" placeholder="Digite seu nome" />
+            <input class="input-nome" type="text" placeholder="Digite seu nome" autofocus />
             <div class="botao-entrar" onclick="entrarNoChat()">Entrar</div>
             <div class="mensagem-de-erro"></div>
         </div>
@@ -43,7 +44,7 @@
 
     <div class="enviar-mensagens">
         <div>
-            <input class="input-mensagem" type="text" placeholder="Escreva aqui..." autofocus />
+            <input class="input-mensagem" type="text" placeholder="Escreva aqui..." />
             <p>Enviando para <em>todos</em></p>
         </div>
         
@@ -52,6 +53,42 @@
 
     <div class="chat">
         <div class="espacador"></div>
+    </div>
+
+    <div class="participantes desativado"></div>
+    <div class="participantes-menu desativado">
+        <p>Escolha um contato para enviar mensagens</p>
+        <div class="participantes-lista">
+            <div class="participante">
+                <ion-icon name="people-outline"></ion-icon>
+                <p>Todos</p>
+                <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+            </div>
+            <div class="participante">
+                <ion-icon name="person-outline"></ion-icon>
+                <p>Participante</p>
+                <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+            </div>
+            <div class="participante">
+                <ion-icon name="person-outline"></ion-icon>
+                <p>Participante</p>
+                <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+            </div>
+        </div>
+
+        <p>Escolha a visibilidade</p>
+        <div class="visibilidade-lista">
+            <div class="visibilidade-opcao">
+                <ion-icon name="lock-open-outline"></ion-icon>
+                <p>Público</p>
+                <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+            </div>
+            <div class="visibilidade-opcao">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <p>Reservado</p>
+                <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

@@ -6,6 +6,7 @@ const inputMensagem = document.querySelector(".input-mensagem");
 
 function inicializarChat () {
     carregarMensagens();
+    inputMensagem.focus();
     intervaloCarregarMensagens = setInterval(carregarMensagens, 3000);
 }
 
@@ -85,7 +86,7 @@ function sucessoEnviar () {
 }
 
 function falhaEnviar () {
-    mensagemDeErro.innerHTML = "Conexão perdida!"
+    mensagemDeErro.innerHTML = "Conexão perdida!";
     telaDeEntrada.classList.remove("desativado");
     clearInterval(intervaloManterConexao);
 }
