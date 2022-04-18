@@ -30,7 +30,7 @@
     color: var(--maincolor);
 }
 
-.entrada > div {
+.entrar {
     position: absolute;
     top: 50%;
 
@@ -81,4 +81,24 @@
     font-weight: 300;
     text-align: center;
     color: var(--msg3color);
+}
+
+.carregando {
+    position: absolute;
+    top: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carregando > img {
+    width: 40%;
+}
+
+.carregando > p {
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--maincolor);
 }
