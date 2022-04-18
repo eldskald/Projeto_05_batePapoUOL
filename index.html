@@ -39,7 +39,7 @@
 
     <div class="barra-topo">
         <img src="img/driven-logo.png" />
-        <ion-icon name="people-outline"></ion-icon>
+        <ion-icon name="people-outline" onclick="abrirMenu()"></ion-icon>
     </div>
 
     <div class="enviar-mensagens">
@@ -55,8 +55,8 @@
         <div class="espacador"></div>
     </div>
 
-    <div class="participantes desativado"></div>
-    <div class="participantes-menu desativado">
+    <div class="participantes desativando desativado" onclick="fecharMenu()"></div>
+    <div class="participantes-menu desativando desativado">
         <p>Escolha um contato para enviar mensagens</p>
         <div class="participantes-lista">
             <div class="participante">
@@ -96,6 +96,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="js/mensagens.js"></script>
+    <script src="js/participantes.js"></script>
     <script src="js/conexao.js"></script>
 </body>
 </html>
