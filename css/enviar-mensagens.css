@@ -21,7 +21,7 @@
     max-width: 90%;
 }
 
-.enviar-mensagens > div > textarea {
+.enviar-mensagens > div > input {
     max-width: 100%;
     
     border-style: none;
@@ -41,7 +41,7 @@
 }
 
 .enviar-mensagens > div > p {
-    margin: 4px 0px 0px 16px;
+    margin: 16px 0px 0px 16px;
     color: var(--seccolor);
     font-family: "Roboto";
     font-size: 14px;
