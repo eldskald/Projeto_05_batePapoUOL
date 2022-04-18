@@ -71,7 +71,7 @@ inputMensagem.onkeypress = (event) => {
 function enviarMensagem () {
     const envio = {
         from: usuarioNome,
-        to: "Todos",
+        to: mandandoPara,
         text: inputMensagem.value,
         type: "message"
     };
