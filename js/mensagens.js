@@ -69,10 +69,17 @@ function enviarMensagem () {
     };
     inputMensagem.value = "";
     const promessa = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", envio);
-    promessa.then(sucessoEnvio);
+    promessa.then(sucessoEnviar);
+    promessa.catch(falhaEnviar);
 }
 
-function sucessoEnvio () {
+function sucessoEnviar () {
     carregarMensagens();
+}
+
+function falhaEnviar () {
+    mensagemDeErro.innerHTML = "Conexão perdida!"
+    telaDeEntrada.classList.remove("desativado");
+    clearInterval(intervaloManterConexao);
 }
 // Enviando mensagens
